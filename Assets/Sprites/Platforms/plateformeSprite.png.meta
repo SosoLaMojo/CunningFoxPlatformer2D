@@ -1,0 +1,751 @@
+fileFormatVersion: 2
+guid: c2a030e182d2c1442810833b1d99a842
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6493295223404544592
+    second: Sol_02
+  - first:
+      213: -4442704451090423580
+    second: Sol_01
+  - first:
+      213: 2902341475086574751
+    second: Sol_03
+  - first:
+      213: 1431075914042833084
+    second: Arbre_01
+  - first:
+      213: 653468466407187058
+    second: Sol_Volant_01
+  - first:
+      213: 5001283700047543748
+    second: Sol_Volant_02
+  - first:
+      213: -5546554654703471793
+    second: Sol_Volant_03
+  - first:
+      213: -6777454782058511239
+    second: Grand_Buisson_01
+  - first:
+      213: -8659553392713834136
+    second: Grand_Buisson_02
+  - first:
+      213: -7937346221616965644
+    second: Petit_Buisson_01
+  - first:
+      213: 96400121786166915
+    second: Petit_Buisson_02
+  - first:
+      213: -3181075577254887209
+    second: Arbre_02
+  - first:
+      213: -8812704457752537539
+    second: Souche_01
+  - first:
+      213: -2797449631056313379
+    second: Roche_01
+  - first:
+      213: 2563067552187312169
+    second: Champi_Orange
+  - first:
+      213: 1270797493866773522
+    second: Champi_Rose
+  - first:
+      213: 1824285129692087627
+    second: "Panneau_Fl\xE8che"
+  - first:
+      213: -7113524783158774099
+    second: Terre_Gauche
+  - first:
+      213: 4833763206634926574
+    second: Terre
+  - first:
+      213: -559411844572831765
+    second: Terre_Droit
+  - first:
+      213: 965102004498690751
+    second: Terre_Bas
+  - first:
+      213: 6474568951551428842
+    second: Terre_Angle_Gauche
+  - first:
+      213: 8084678532287956326
+    second: Terre_Angle_Droit
+  - first:
+      213: -9038695107630581384
+    second: Terre_Bas_Gauche
+  - first:
+      213: 6494963125540254615
+    second: Terre_Bas_Droit
+  - first:
+      213: 2922748045043754048
+    second: Sol_04
+  - first:
+      213: -1747658378937924390
+    second: Sol_05
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sol_02
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 285
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8242b77d32985c64fbf02ba7cd7edf23
+      internalID: 6493295223404544592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sol_01
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 285
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d6ff9edd72a8d4ca063975407c88b3
+      internalID: -4442704451090423580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sol_03
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 285
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5528bf8e3b577004885bf251945e16f5
+      internalID: 2902341475086574751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arbre_01
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 108
+        width: 169
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58abb0d2b8cf084f9242d0e2c730660
+      internalID: 1431075914042833084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sol_Volant_01
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 53
+        width: 76
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5dbc17fcfa8c0841883781c050b33fc
+      internalID: 653468466407187058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sol_Volant_02
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 53
+        width: 76
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9c26c3d8b93f648b51d08e3a06d099
+      internalID: 5001283700047543748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sol_Volant_03
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 53
+        width: 77
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475b0028750f6864db9897416ef8b190
+      internalID: -5546554654703471793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grand_Buisson_01
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 41
+        width: 79
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26310c4290d6d6a438d969d4158b10b7
+      internalID: -6777454782058511239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grand_Buisson_02
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 41
+        width: 78
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc45e81eba5a9e48a811ab4677bf529
+      internalID: -8659553392713834136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Buisson_01
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 47
+        width: 42
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87311f3792e467c4d82fe47b6655d7b9
+      internalID: -7937346221616965644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Buisson_02
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 47
+        width: 42
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc0913dbea406f40960dce473a9e3b7
+      internalID: 96400121786166915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arbre_02
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 108
+        width: 168
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3327b99bdd31cfd40a0fde5223f9c803
+      internalID: -3181075577254887209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Souche_01
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 288
+        width: 67
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc3ea7aab9deff4da4a343f2eb91161
+      internalID: -8812704457752537539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roche_01
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 331
+        width: 50
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533fe8c981638ed49b651584302a17d9
+      internalID: -2797449631056313379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Champi_Orange
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 303
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d4ecb18afa8b7498b309edfdf0dd09
+      internalID: 2563067552187312169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Champi_Rose
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 303
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c137deb27f6bba24792dc5219e435edc
+      internalID: 1270797493866773522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Panneau_Fl\xE8che"
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 303
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493852e1c2ad00642ac76afd14a24b31
+      internalID: 1824285129692087627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terre_Gauche
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 201
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: babd8242541c7564a92efc175754ade6
+      internalID: -7113524783158774099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terre
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 201
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c78e3e8d447e347930778210f79d7b
+      internalID: 4833763206634926574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terre_Droit
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 201
+        width: 77
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ded617b3d6854469de7b6b943bbb09
+      internalID: -559411844572831765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terre_Bas
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 115
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56be0b55233e9ce4e893437a2f294df5
+      internalID: 965102004498690751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terre_Angle_Gauche
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 115
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f21c19192e32ffc48aa8eb3d6cd06b3c
+      internalID: 6474568951551428842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terre_Angle_Droit
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 115
+        width: 77
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eeebdcff2ad8224a8dba185eac36d98
+      internalID: 8084678532287956326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terre_Bas_Gauche
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28988a1082a0cd24082ea57d22177113
+      internalID: -9038695107630581384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terre_Bas_Droit
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 31
+        width: 76
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936b023774cd7254eab4b072b1542e4a
+      internalID: 6494963125540254615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sol_04
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 115
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51db2accd71a3b044b09dde691af6bf4
+      internalID: 2922748045043754048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sol_05
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 115
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb986279d30f9045b317ad20e306efb
+      internalID: -1747658378937924390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
