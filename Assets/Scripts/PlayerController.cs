@@ -21,14 +21,14 @@ public class PlayerController : MonoBehaviour{
     [SerializeField]
     private LayerMask layer;
 
-    //private Vector3 startPosition;
+    private Vector3 startPosition;
 
     private void Start()
     {
-       // startPosition = transform.position;
         velocity = Vector2.zero;
         rigidBody = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
+        startPosition = transform.position;
     }
     private void Update()
     {
@@ -59,10 +59,10 @@ public class PlayerController : MonoBehaviour{
         // apply velocity
         RunAndJump(_velocity);
 
-        //if (transform.position.y <= 13.5f)
-        //{
-        //    respawn();
-        //}
+        if (transform.position.y <= -13.5f)
+        {
+            respawn();
+        }
     }
 
     void FixedUpdate()
@@ -75,10 +75,6 @@ public class PlayerController : MonoBehaviour{
         egg += value;
     }
 
-    //public void respawn()
-    //{
-    //    transform.position = startPosition;
-    //}
 
     public void RunAndJump(Vector2 _velocity)
     {
@@ -98,6 +94,10 @@ public class PlayerController : MonoBehaviour{
         Animator.SetBool("IsJumping", !isGrounded);
     }
 
+    public void respawn()
+    {
+        transform.position = startPosition;
+    }
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(groundCheck.transform.position, new Vector3 (0.32f,0.06f,0));
