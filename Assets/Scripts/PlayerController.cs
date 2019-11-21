@@ -13,19 +13,19 @@ public class PlayerController : MonoBehaviour{
     private Rigidbody2D rigidBody;
 
     [SerializeField]
-    private float maxSpeed, maxSpeedJump, radiusCircle, radiusCircle2;
+    private float maxSpeed, maxSpeedJump, radiusCircle;
 
     [SerializeField]
     private GameObject groundCheck;
 
     [SerializeField]
-    private GameObject groundCheck2;
-
-    [SerializeField]
     private LayerMask layer;
+
+    //private Vector3 startPosition;
 
     private void Start()
     {
+       // startPosition = transform.position;
         velocity = Vector2.zero;
         rigidBody = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
@@ -56,8 +56,13 @@ public class PlayerController : MonoBehaviour{
         // get velocity
         Vector2 _velocity = new Vector2 (x, y);
 
-        // apply velocity in the player motor
+        // apply velocity
         RunAndJump(_velocity);
+
+        //if (transform.position.y <= 13.5f)
+        //{
+        //    respawn();
+        //}
     }
 
     void FixedUpdate()
@@ -70,6 +75,11 @@ public class PlayerController : MonoBehaviour{
         egg += value;
     }
 
+    //public void respawn()
+    //{
+    //    transform.position = startPosition;
+    //}
+
     public void RunAndJump(Vector2 _velocity)
     {
         velocity = _velocity;
@@ -77,22 +87,19 @@ public class PlayerController : MonoBehaviour{
 
     private void PerformRunAndJump()
     {
-        bool _grounded = Physics2D.OverlapCircle(groundCheck.transform.position, radiusCircle, layer);
-        bool _grounded2 = Physics2D.OverlapCircle(groundCheck2.transform.position, radiusCircle2, layer);
-        bool isGrounded = (_grounded || _grounded2) && Mathf.Abs(rigidBody.velocity.y) <= 0.01f;
+        bool _grounded = Physics2D.OverlapBox(groundCheck.transform.position, new Vector3(0.32f, 0.06f, 0), layer);
+        bool isGrounded = _grounded && Mathf.Abs(rigidBody.velocity.y) <= 0.01f;
 
         if (isGrounded)
         {
             rigidBody.AddForce(new Vector2(0f, velocity.y) * Time.deltaTime * maxSpeedJump, ForceMode2D.Impulse);
         }
         rigidBody.velocity = new Vector2(velocity.x * maxSpeed * Time.deltaTime, rigidBody.velocity.y);
-        
         Animator.SetBool("IsJumping", !isGrounded);
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(groundCheck.transform.position, radiusCircle);
-        Gizmos.DrawWireSphere(groundCheck2.transform.position, radiusCircle2);
+        Gizmos.DrawWireCube(groundCheck.transform.position, new Vector3 (0.32f,0.06f,0));
     }
 }
