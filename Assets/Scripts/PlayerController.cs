@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour{
 
@@ -22,6 +23,9 @@ public class PlayerController : MonoBehaviour{
     private LayerMask layer;
 
     private Vector3 startPosition;
+
+    [SerializeField] int eggScore;
+    [SerializeField] TextMeshProUGUI textEggScore;
 
     private void Start()
     {
@@ -73,6 +77,7 @@ public class PlayerController : MonoBehaviour{
     public void AddEgg(int value)
     {
         egg += value;
+        textEggScore.text = egg.ToString();
     }
 
 
