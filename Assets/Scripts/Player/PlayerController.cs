@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour{
     private float playerLifeMax = 5.0f, currentPlayerLife;
 
     [SerializeField]
-    private int owlDamage = 1; 
+    private int owlDamage = 1, fallingDamage = 1; 
 
     private Vector2 velocity; 
     private Rigidbody2D rigidBody;
@@ -74,6 +74,8 @@ public class PlayerController : MonoBehaviour{
         if (transform.position.y <= -13.5f)
         {
             respawn();
+            currentPlayerLife -= fallingDamage;
+            textHeartPlayer.text = currentPlayerLife.ToString();
         }
     }
 
