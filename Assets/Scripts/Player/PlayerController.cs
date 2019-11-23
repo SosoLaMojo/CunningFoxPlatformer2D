@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour{
     private Vector3 startPosition;
 
     [SerializeField] TextMeshProUGUI textEggScore;
+    [SerializeField] TextMeshProUGUI textHeartPlayer;
 
     private void Start()
     {
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour{
         Animator = GetComponent<Animator>();
         startPosition = transform.position;
         currentPlayerLife = playerLifeMax;
+        textHeartPlayer.text = currentPlayerLife.ToString();
     }
     private void Update()
     {
@@ -117,7 +119,8 @@ public class PlayerController : MonoBehaviour{
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-           currentPlayerLife = currentPlayerLife - owlDamage;
+           currentPlayerLife -= owlDamage;
+           textHeartPlayer.text = currentPlayerLife.ToString();
         }
     }
 }
