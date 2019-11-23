@@ -10,6 +10,12 @@ public class PlayerController : MonoBehaviour{
     [SerializeField]
     private int egg = 0;
 
+    [SerializeField]
+    private float playerLifeMax = 5.0f, currentPlayerLife;
+
+    [SerializeField]
+    private int owlDamage = 1; 
+
     private Vector2 velocity; 
     private Rigidbody2D rigidBody;
 
@@ -32,6 +38,7 @@ public class PlayerController : MonoBehaviour{
         rigidBody = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         startPosition = transform.position;
+        currentPlayerLife = playerLifeMax;
     }
     private void Update()
     {
@@ -104,5 +111,13 @@ public class PlayerController : MonoBehaviour{
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(groundCheck.transform.position, new Vector3 (0.32f,0.06f,0));
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+           currentPlayerLife = currentPlayerLife - owlDamage;
+        }
     }
 }

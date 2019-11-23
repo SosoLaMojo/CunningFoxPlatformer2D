@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6505771579765280412}
   - component: {fileID: 6505771579765280415}
   m_Layer: 8
-  m_Name: Egg_Purple 1
+  m_Name: Egg_Purple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,4 +112,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
-  owl: {fileID: 2872100529310476441, guid: 44db3f9c6aa6a0c4bae9b5899664b5a8, type: 3}
+  owl: {fileID: 8273789541058318314, guid: bae19f2c87407974f8a4399d1ea3f285, type: 3}

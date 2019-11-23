@@ -112,10 +112,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
-  floatingDistance: 1
-  animationCurve_:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  owl: {fileID: 4026593669188506469, guid: 3a37f07ce3186904ba065b8e16f31a27, type: 3}
