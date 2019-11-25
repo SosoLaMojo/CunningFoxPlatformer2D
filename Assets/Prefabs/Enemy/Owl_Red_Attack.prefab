@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8534784879571620291}
   - component: {fileID: 960227543046036156}
   - component: {fileID: 2134043512665242428}
+  - component: {fileID: 4729634228445802906}
   m_Layer: 10
   m_Name: Owl_Red_Attack
   m_TagString: Untagged
@@ -95,6 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ea720bc6648d54fa123188a32f3a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  targetChase: {fileID: 2979345761453198489, guid: 79cc2599cfd1ab74991f7850111959d2,
+    type: 3}
 --- !u!60 &2134043512665242428
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -181,3 +185,24 @@ PolygonCollider2D:
       - {x: 0.12482834, y: 0.041007042}
       - {x: 0.1357317, y: 0.04309845}
       - {x: 0.13571453, y: 0.08548069}
+--- !u!50 &4729634228445802906
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5968474320281682702}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

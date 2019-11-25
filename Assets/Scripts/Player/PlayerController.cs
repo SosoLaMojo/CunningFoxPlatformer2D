@@ -121,8 +121,11 @@ public class PlayerController : MonoBehaviour{
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-           currentPlayerLife -= owlDamage;
-           textHeartPlayer.text = currentPlayerLife.ToString();
+            if (currentPlayerLife >= 0.1f)
+            {
+                currentPlayerLife -= owlDamage;
+                textHeartPlayer.text = currentPlayerLife.ToString();
+            }
         }
     }
 }

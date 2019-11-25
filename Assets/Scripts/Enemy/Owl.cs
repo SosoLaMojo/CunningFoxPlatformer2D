@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Owl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Rigidbody2D body;
+
+    [SerializeField] float speed;
+
+    [SerializeField] Transform targetChase;
+
     void Start()
     {
-        
+        body = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        Vector3 velocity = (targetChase.position - transform.position).normalized * speed;
+        velocity = new Vector3(velocity.x, body.velocity.y, 0);
+        Debug.Log("Hello");
     }
 }
