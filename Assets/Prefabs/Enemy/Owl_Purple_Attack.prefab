@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ea720bc6648d54fa123188a32f3a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 20
   targetChase: {fileID: 6505771579765280414, guid: 932e54f84c455954f8701f73d77db33e,
     type: 3}
   leftOffset: {x: 0, y: 0, z: 0}

@@ -15,7 +15,8 @@ public class Egg : MonoBehaviour
             other.GetComponent<PlayerController>().AddEgg(value);
             if(owl != null)
             {
-                GameObject.Instantiate(owl, new Vector2(transform.position.x + 4, transform.position.y + 2.5f), Quaternion.identity);
+                GameObject Enemy = Instantiate(owl, new Vector2(transform.position.x + 4, transform.position.y + 2.5f), Quaternion.identity);
+                Enemy.GetComponent<Owl>().targetChase = transform;
             }
             Destroy(gameObject);
         }

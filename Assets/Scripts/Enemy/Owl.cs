@@ -8,7 +8,7 @@ public class Owl : MonoBehaviour
 
     [SerializeField] float speed;
 
-    [SerializeField] Transform targetChase;
+    [SerializeField] public Transform targetChase;
 
     [SerializeField] Vector3 leftOffset;
     [SerializeField] Vector3 rightOffset;
@@ -26,11 +26,14 @@ public class Owl : MonoBehaviour
     
     void Update()
     {
-        Vector3 velocity = (leftTarget - transform.position).normalized * speed;
-        velocity = new Vector3(velocity.x, body.velocity.y, 0);
-
+        Vector3 velocity = (transform.position - targetChase.position) * speed;
+        Debug.Log(targetChase.position);
+        Debug.Log(transform.position);
+        velocity = new Vector3(velocity.x, velocity.y, 0).normalized;
         body.velocity = velocity;
-        Debug.Log("Hello");
-       // Destroy(gameObject);
+       
+
+        Debug.Log(body.velocity);
+ 
     }
 }
