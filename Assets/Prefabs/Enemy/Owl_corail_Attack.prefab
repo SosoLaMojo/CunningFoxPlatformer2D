@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1233337693179856897}
   - component: {fileID: 4458203571764694535}
   - component: {fileID: 6564125651774864162}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Owl_Corail_Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}

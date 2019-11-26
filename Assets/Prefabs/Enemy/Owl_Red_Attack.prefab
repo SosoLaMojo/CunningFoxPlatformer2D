@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3832218429056285120}
   - component: {fileID: 3668350912566313025}
   - component: {fileID: 6710858068245575494}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Owl_Red_Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
