@@ -6,34 +6,25 @@ public class Owl : MonoBehaviour
 {
     Rigidbody2D body;
 
-    [SerializeField] float speed;
+    [SerializeField] float speed = 20.0f;
 
-    [SerializeField] public Transform targetChase;
-
-    [SerializeField] Vector3 leftOffset;
-    [SerializeField] Vector3 rightOffset;
-
-    Vector3 leftTarget;
-    Vector3 rightTarget;
+    [SerializeField] public Vector3 targetChase;
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        leftTarget = transform.position + leftOffset;
-        rightTarget = transform.position + rightOffset;
+        //Debug.Log(targetChase);
     }
-
     
     void Update()
     {
-        Vector3 velocity = (transform.position - targetChase.position) * speed;
-        Debug.Log(targetChase.position);
-        Debug.Log(transform.position);
+        Vector3 velocity = (-transform.position + targetChase);
+        //Debug.Log(targetChase.position);
+        //Debug.Log(transform.position);
+        //Debug.Log(velocity);
         velocity = new Vector3(velocity.x, velocity.y, 0).normalized;
-        body.velocity = velocity;
+        body.velocity = velocity * speed;
        
-
-        Debug.Log(body.velocity);
- 
+       // Debug.Log(body.velocity);
     }
 }
