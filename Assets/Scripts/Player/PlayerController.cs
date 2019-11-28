@@ -74,8 +74,11 @@ public class PlayerController : MonoBehaviour{
         if (transform.position.y <= -13.5f)
         {
             respawn();
-            currentPlayerLife -= fallingDamage;
-            textHeartPlayer.text = currentPlayerLife.ToString();
+            if (currentPlayerLife >= 0.1f)
+            {
+                currentPlayerLife -= fallingDamage;
+                textHeartPlayer.text = currentPlayerLife.ToString();
+            } 
         }
     }
 
