@@ -41,11 +41,13 @@ public class Owl : MonoBehaviour
 
             case State.WAITING:
                 state = State.GOINGUP;
+                initialposition = new Vector2(initialposition.x - 2 * (initialposition.x - transform.position.x), initialposition.y);
                 break;
 
             case State.GOINGUP:
+                
                 body.velocity = (initialposition - transform.position).normalized * speed;
-                if (transform.position == initialposition)
+                if(Vector3.Distance(transform.position, initialposition) < 0.2f)
                 {
                 state = State.DESTROY;
                 }
