@@ -130,5 +130,11 @@ public class PlayerController : MonoBehaviour{
                 textHeartPlayer.text = currentPlayerLife.ToString();
             }
         }
+        //if (other.gameObject.layer == LayerMask.NameToLayer("Strain"))
+        //{
+            
+        //    Application.Quit();
+        //    Debug.Log("EndGame");
+        //}
     }
 }
