@@ -105,9 +105,9 @@ public class PlayerController : MonoBehaviour{
 
         if (isGrounded)
         {
-            rigidBody.AddForce(new Vector2(0f, velocity.y) * Time.deltaTime * maxSpeedJump, ForceMode2D.Impulse);
+            rigidBody.AddForce(new Vector2(0f, velocity.y) * Time.fixedDeltaTime * maxSpeedJump, ForceMode2D.Impulse);
         }
-        rigidBody.velocity = new Vector2(velocity.x * maxSpeed * Time.deltaTime, rigidBody.velocity.y);
+        rigidBody.velocity = new Vector2(velocity.x * maxSpeed * Time.fixedDeltaTime, rigidBody.velocity.y);
         Animator.SetBool("IsJumping", !isGrounded);
     }
 
@@ -130,11 +130,5 @@ public class PlayerController : MonoBehaviour{
                 textHeartPlayer.text = currentPlayerLife.ToString();
             }
         }
-        //if (other.gameObject.layer == LayerMask.NameToLayer("Strain"))
-        //{
-            
-        //    Application.Quit();
-        //    Debug.Log("EndGame");
-        //}
     }
 }

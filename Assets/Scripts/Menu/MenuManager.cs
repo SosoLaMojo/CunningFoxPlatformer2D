@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
 
     void Update()
     {
+        //Menu Pause
         if (Input.GetKeyDown(KeyCode.P))
         {
             if (canvasMenuPause.activeSelf)

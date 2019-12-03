@@ -26,7 +26,6 @@ public class Stain : MonoBehaviour
             if (panelEndGame.activeSelf)
             {
                 DesactivatePanelEndGame();
-            Debug.Log("Player enter stain!!");
             }
             else
             {

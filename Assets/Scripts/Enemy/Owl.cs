@@ -45,7 +45,6 @@ public class Owl : MonoBehaviour
                 break;
 
             case State.GOINGUP:
-                
                 body.velocity = (initialposition - transform.position).normalized * speed;
                 if(Vector3.Distance(transform.position, initialposition) < 0.2f)
                 {
@@ -58,14 +57,14 @@ public class Owl : MonoBehaviour
                 break;
         }
 
-                if (body.velocity.x <= 0)
-                {
-                    GetComponent<SpriteRenderer>().flipX = false;
-                }
-                else
-                {
-                    GetComponent<SpriteRenderer>().flipX = true;
-                }
+                    if (body.velocity.x <= 0)
+                    {
+                        GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    else
+                    {
+                        GetComponent<SpriteRenderer>().flipX = true;
+                    }
 
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6505771579765280412}
   - component: {fileID: 6505771579765280415}
   - component: {fileID: -3550397399029824164}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Egg_Purple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 1
   owl: {fileID: 6715123952709655289, guid: fb45c0719ae708c48900aef181f7bc92, type: 3}
+  eggSound: {fileID: 8300000, guid: f2e4e9aae883b1b4d9675b2d31ed8584, type: 3}
 --- !u!82 &-3550397399029824164
 AudioSource:
   m_ObjectHideFlags: 0

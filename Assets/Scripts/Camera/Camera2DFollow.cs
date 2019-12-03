@@ -1,16 +1,13 @@
 using UnityEngine;
 
-namespace UnitySampleAssets._2D
-{
-
     public class Camera2DFollow : MonoBehaviour
     {
 
-        public Transform target;
-        public float damping = 1;
-        public float lookAheadFactor = 3;
-        public float lookAheadReturnSpeed = 0.5f;
-        public float lookAheadMoveThreshold = 0.1f;
+        [SerializeField] Transform target;
+        [SerializeField] float damping = 1;
+        [SerializeField] float lookAheadFactor = 3;
+        [SerializeField] float lookAheadReturnSpeed = 0.5f;
+        [SerializeField] float lookAheadMoveThreshold = 0.1f;
 
         private float offsetZ;
         private Vector3 lastTargetPosition;
@@ -49,4 +46,3 @@ namespace UnitySampleAssets._2D
             lastTargetPosition = target.position;
         }
     }
-}
