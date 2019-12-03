@@ -8,15 +8,18 @@ public class Owl : MonoBehaviour
 
     [SerializeField] float speed = 20.0f;
 
-    [SerializeField] public Vector3 targetChase;
     Vector3 eggPosition;
-    Vector3 initialposition;
+    Vector3 initialPosition;
+
+    public Vector3 EggPostion {
+        get { return eggPosition; }
+        set { eggPosition = value; }
+    }
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        eggPosition = targetChase;
-        initialposition = transform.position;
+        initialPosition = transform.position;
     }
     
     enum State
@@ -41,12 +44,12 @@ public class Owl : MonoBehaviour
 
             case State.WAITING:
                 state = State.GOINGUP;
-                initialposition = new Vector2(initialposition.x - 2 * (initialposition.x - transform.position.x), initialposition.y);
+                initialPosition = new Vector2(initialPosition.x - 2 * (initialPosition.x - transform.position.x), initialPosition.y);
                 break;
 
             case State.GOINGUP:
-                body.velocity = (initialposition - transform.position).normalized * speed;
-                if(Vector3.Distance(transform.position, initialposition) < 0.2f)
+                body.velocity = (initialPosition - transform.position).normalized * speed;
+                if(Vector3.Distance(transform.position, initialPosition) < 0.2f)
                 {
                 state = State.DESTROY;
                 }
