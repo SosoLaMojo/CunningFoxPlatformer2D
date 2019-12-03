@@ -57,14 +57,13 @@ public class Owl : MonoBehaviour
                 break;
         }
 
-                    if (body.velocity.x <= 0)
-                    {
-                        GetComponent<SpriteRenderer>().flipX = false;
-                    }
-                    else
-                    {
-                        GetComponent<SpriteRenderer>().flipX = true;
-                    }
-
+        if (body.velocity.x <= 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 }

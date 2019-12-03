@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 1
   owl: {fileID: 6245591815571341835, guid: 38829f84a4eed4840b340a1db5f81dd1, type: 3}
-  eggSound: {fileID: 8300000, guid: f2e4e9aae883b1b4d9675b2d31ed8584, type: 3}
+  eggSound: {fileID: 8300000, guid: 6f2602307a6a7ff43a584bfb36f77df2, type: 3}
 --- !u!82 &-5421768580090454861
 AudioSource:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 805f579320d2aea4995032ae365571f1,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: f2e4e9aae883b1b4d9675b2d31ed8584, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6f2602307a6a7ff43a584bfb36f77df2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

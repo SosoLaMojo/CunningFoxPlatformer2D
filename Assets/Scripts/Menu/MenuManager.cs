@@ -5,14 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] GameObject canvasMenuPause;
+    [SerializeField] GameObject panelMenuPause;
+    [SerializeField] GameObject panelGameOver;
+    [SerializeField] PlayerController playerController;
 
     void Update()
     {
-        //Menu Pause
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if (canvasMenuPause.activeSelf)
+            if (panelMenuPause.activeSelf)
             {
                 DesactivateMenuPause();
             }
@@ -21,17 +22,23 @@ public class MenuManager : MonoBehaviour
                 ActivateMenuPause();
             }
         }
+
+        if (playerController.GetPlayerLife() <= 0)
+        {
+            panelGameOver.gameObject.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 
     public void DesactivateMenuPause()
     {
-        canvasMenuPause.gameObject.SetActive(false);
+        panelMenuPause.gameObject.SetActive(false);
         Time.timeScale = 1;
     }
 
     public void ActivateMenuPause()
     {
-        canvasMenuPause.gameObject.SetActive(true);
+        panelMenuPause.gameObject.SetActive(true);
         Time.timeScale = 0;
     }
 

@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour{
+public class PlayerController : MonoBehaviour
+{
 
     private Animator Animator;
+    private SpriteRenderer playerRenderer;
 
     [SerializeField]
-    private int egg = 0;
+    private int egg = 0, playerLifeMax = 10;
 
     [SerializeField]
-    private float playerLifeMax = 5.0f, currentPlayerLife;
+    private int currentPlayerLife;
 
     [SerializeField]
-    private int owlDamage = 1, fallingDamage = 1; 
+    private int owlDamage = 1, fallingDamage = 1;
 
-    private Vector2 velocity; 
+    private Vector2 velocity;
     private Rigidbody2D rigidBody;
 
     [SerializeField]
@@ -30,6 +33,8 @@ public class PlayerController : MonoBehaviour{
 
     private Vector3 startPosition;
 
+    private float respawnPosition = -13.5f;
+
     [SerializeField] TextMeshProUGUI textEggScore;
     [SerializeField] TextMeshProUGUI textHeartPlayer;
 
@@ -38,6 +43,7 @@ public class PlayerController : MonoBehaviour{
         velocity = Vector2.zero;
         rigidBody = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
+        playerRenderer = GetComponent<SpriteRenderer>();
         startPosition = transform.position;
         currentPlayerLife = playerLifeMax;
         textHeartPlayer.text = currentPlayerLife.ToString();
@@ -49,36 +55,38 @@ public class PlayerController : MonoBehaviour{
 
         Animator.SetFloat("Speed", Mathf.Abs(x));
 
-        if(x == -1)
+        if (x == -1)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            playerRenderer.flipX = true;
         }
-        else if(x == 1)
+        else if (x == 1)
         {
-            GetComponent<SpriteRenderer>().flipX = false;
+            playerRenderer.flipX = false;
         }
 
         float y = 0;
-        
-        if(Input.GetButtonDown("Jump"))
+
+        if (Input.GetButtonDown("Jump"))
         {
             y = 1;
         }
 
-        // get velocity
-        Vector2 _velocity = new Vector2 (x, y);
+        velocity = new Vector2(x, y);
 
-        // apply velocity
-        RunAndJump(_velocity);
+        RunAndJump(velocity);
 
-        if (transform.position.y <= -13.5f)
+        if (transform.position.y <= respawnPosition)
         {
             respawn();
             if (currentPlayerLife >= 0.1f)
             {
                 currentPlayerLife -= fallingDamage;
                 textHeartPlayer.text = currentPlayerLife.ToString();
-            } 
+            }
+        }
+        if (currentPlayerLife <= 0)
+        {
+            Application.Quit();
         }
     }
 
@@ -100,8 +108,8 @@ public class PlayerController : MonoBehaviour{
 
     private void PerformRunAndJump()
     {
-        bool _grounded = Physics2D.OverlapBox(groundCheck.transform.position, new Vector3(0.32f, 0.06f, 0), layer);
-        bool isGrounded = _grounded && Mathf.Abs(rigidBody.velocity.y) <= 0.01f;
+        bool grounded = Physics2D.OverlapBox(groundCheck.transform.position, new Vector3(0.32f, 0.06f, 0), layer);
+        bool isGrounded = grounded && Mathf.Abs(rigidBody.velocity.y) <= 0.01f;
 
         if (isGrounded)
         {
@@ -117,7 +125,7 @@ public class PlayerController : MonoBehaviour{
     }
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(groundCheck.transform.position, new Vector3 (0.32f,0.06f,0));
+        Gizmos.DrawWireCube(groundCheck.transform.position, new Vector3(0.32f, 0.06f, 0));
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -130,5 +138,10 @@ public class PlayerController : MonoBehaviour{
                 textHeartPlayer.text = currentPlayerLife.ToString();
             }
         }
+    }
+
+    public int GetPlayerLife()
+    {
+        return currentPlayerLife;
     }
 }

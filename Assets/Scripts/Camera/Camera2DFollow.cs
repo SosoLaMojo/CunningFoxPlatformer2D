@@ -22,7 +22,6 @@ using UnityEngine;
             transform.parent = null;
         }
 
-
         private void Update()
         {
             // only update lookahead pos if accelerating or changed direction
