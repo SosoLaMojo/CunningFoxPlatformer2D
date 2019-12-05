@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-
     private Animator Animator;
     private SpriteRenderer playerRenderer;
 
@@ -23,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigidBody;
 
     [SerializeField]
-    private float maxSpeed, maxSpeedJump;
+    private float maxSpeed = 70.0f, maxSpeedJump = 200.0f;
 
     [SerializeField]
     private GameObject groundCheck;
@@ -48,6 +47,7 @@ public class PlayerController : MonoBehaviour
         currentPlayerLife = playerLifeMax;
         textHeartPlayer.text = currentPlayerLife.ToString();
     }
+
     private void Update()
     {
         // get value in the axes x and y
@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
 
         if (transform.position.y <= respawnPosition)
         {
-            respawn();
+            Respawn();
             if (currentPlayerLife >= 0.1f)
             {
                 currentPlayerLife -= fallingDamage;
@@ -88,10 +88,6 @@ public class PlayerController : MonoBehaviour
         {
             Application.Quit();
         }
-    }
-
-    void FixedUpdate()
-    {
         PerformRunAndJump();
     }
 
@@ -119,7 +115,7 @@ public class PlayerController : MonoBehaviour
         Animator.SetBool("IsJumping", !isGrounded);
     }
 
-    public void respawn()
+    public void Respawn()
     {
         transform.position = startPosition;
     }

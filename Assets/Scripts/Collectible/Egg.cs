@@ -10,6 +10,7 @@ public class Egg : MonoBehaviour
     [SerializeField] GameObject owl;
     [SerializeField] AudioClip eggSound;
     AudioSource audioSource;
+
     private void Start()
     {
        audioSource = GetComponent<AudioSource>();

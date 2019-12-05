@@ -2566,22 +2566,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2142833508}
     m_Modifications:
-    - target: {fileID: -3550397399029824164, guid: 932e54f84c455954f8701f73d77db33e,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: 805f579320d2aea4995032ae365571f1,
-        type: 2}
-    - target: {fileID: -3550397399029824164, guid: 932e54f84c455954f8701f73d77db33e,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -3550397399029824164, guid: 932e54f84c455954f8701f73d77db33e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6505771579765280387, guid: 932e54f84c455954f8701f73d77db33e,
         type: 3}
       propertyPath: m_Name
@@ -2641,6 +2625,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3550397399029824164, guid: 932e54f84c455954f8701f73d77db33e,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 805f579320d2aea4995032ae365571f1,
+        type: 2}
+    - target: {fileID: -3550397399029824164, guid: 932e54f84c455954f8701f73d77db33e,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3550397399029824164, guid: 932e54f84c455954f8701f73d77db33e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6505771579765280415, guid: 932e54f84c455954f8701f73d77db33e,
         type: 3}
@@ -3552,8 +3552,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289018433
-  m_fontColor: {r: 0.25617304, g: 0.23028658, b: 0.6509434, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5785,8 +5785,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286857843
-  m_fontColor: {r: 0.45248038, g: 0.26188144, b: 0.5188679, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6017,8 +6017,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6967cf74e5eae145acef5a7994c4c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSources: []
-  playerJumpMixer: {fileID: 24100000, guid: 42a53484951c02d43aff9bd306a4f56d, type: 2}
 --- !u!4 &1352108646 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4332966299718496235, guid: 1c3c6988d98fe16468189548173ad320,
@@ -7105,7 +7103,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1854110093}
-  - component: {fileID: 1854110094}
   m_Layer: 0
   m_Name: Audio_Manager
   m_TagString: Untagged
@@ -7127,20 +7124,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1854110094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854110092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6967cf74e5eae145acef5a7994c4c67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSources: []
-  playerJumpMixer: {fileID: 0}
 --- !u!1001 &1861164529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9009,6 +8992,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8862038159872459430, guid: fd5709d2aff7c3d4faf36eae4bffae5a,
+        type: 3}
+      propertyPath: textEggScore
+      value: 
+      objectReference: {fileID: 1326819063}
+    - target: {fileID: 8862038159872459430, guid: fd5709d2aff7c3d4faf36eae4bffae5a,
+        type: 3}
+      propertyPath: textHeartPlayer
+      value: 
+      objectReference: {fileID: 885762560}
+    - target: {fileID: 8862038159872459430, guid: fd5709d2aff7c3d4faf36eae4bffae5a,
+        type: 3}
+      propertyPath: playerLifeMax
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8862038159872459425, guid: fd5709d2aff7c3d4faf36eae4bffae5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9063,21 +9061,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8862038159872459430, guid: fd5709d2aff7c3d4faf36eae4bffae5a,
-        type: 3}
-      propertyPath: textEggScore
-      value: 
-      objectReference: {fileID: 1326819063}
-    - target: {fileID: 8862038159872459430, guid: fd5709d2aff7c3d4faf36eae4bffae5a,
-        type: 3}
-      propertyPath: textHeartPlayer
-      value: 
-      objectReference: {fileID: 885762560}
-    - target: {fileID: 8862038159872459430, guid: fd5709d2aff7c3d4faf36eae4bffae5a,
-        type: 3}
-      propertyPath: playerLifeMax
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd5709d2aff7c3d4faf36eae4bffae5a, type: 3}

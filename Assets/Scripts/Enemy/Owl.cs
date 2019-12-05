@@ -11,7 +11,8 @@ public class Owl : MonoBehaviour
     Vector3 eggPosition;
     Vector3 initialPosition;
 
-    public Vector3 EggPostion {
+    public Vector3 EggPostion 
+    {
         get { return eggPosition; }
         set { eggPosition = value; }
     }
@@ -29,7 +30,9 @@ public class Owl : MonoBehaviour
         GOINGUP,
         DESTROY
     }
+
     State state = State.FALLING;
+
     void Update()
     {
         switch (state)
