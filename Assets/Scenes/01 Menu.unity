@@ -322,6 +322,7 @@ MonoBehaviour:
   panelMenuPause: {fileID: 0}
   panelGameOver: {fileID: 0}
   panelCredits: {fileID: 472335551}
+  panelMenuStartGame: {fileID: 504025441}
   playerController: {fileID: 0}
 --- !u!1 &265955768
 GameObject:
@@ -655,7 +656,7 @@ GameObject:
   - component: {fileID: 472335554}
   - component: {fileID: 472335553}
   m_Layer: 5
-  m_Name: Credits
+  m_Name: Panel Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -957,7 +958,7 @@ GameObject:
   - component: {fileID: 504025442}
   - component: {fileID: 504025444}
   m_Layer: 5
-  m_Name: Menu
+  m_Name: Panel Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1436,7 +1437,7 @@ GameObject:
   - component: {fileID: 1265762128}
   - component: {fileID: 1265762127}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1482,9 +1483,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1506,6 +1507,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 29719621}
         m_MethodName: DesactivatePanelCredits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 29719621}
+        m_MethodName: ActivatePanelMenuStartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2309,6 +2321,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 29719621}
         m_MethodName: ActivatePanelCredits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 29719621}
+        m_MethodName: DesactivatePanelMenuStartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
