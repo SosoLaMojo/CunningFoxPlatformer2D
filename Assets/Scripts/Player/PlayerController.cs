@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class PlayerController : MonoBehaviour
 {
     private Animator Animator;
     private SpriteRenderer playerRenderer;
+
+    AudioSource audioSource;
 
     [SerializeField]
     private int egg = 0, playerLifeMax = 10;
@@ -46,6 +49,7 @@ public class PlayerController : MonoBehaviour
         startPosition = transform.position;
         currentPlayerLife = playerLifeMax;
         textHeartPlayer.text = currentPlayerLife.ToString();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -69,6 +73,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             y = 1;
+            audioSource.Play();
         }
 
         velocity = new Vector2(x, y);
