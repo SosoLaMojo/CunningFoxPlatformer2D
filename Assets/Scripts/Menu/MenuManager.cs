@@ -57,7 +57,7 @@ public class MenuManager : MonoBehaviour
 
     public void ActivatePanelMenuStartGame()
     {
-        panelMenuStartGame.gameObject.SetActive(true);
+        panelCredits.gameObject.SetActive(true);
         Time.timeScale = 0;
     }
     public void DesactivatePanelMenuStartGame()

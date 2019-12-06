@@ -89,10 +89,7 @@ public class PlayerController : MonoBehaviour
                 textHeartPlayer.text = currentPlayerLife.ToString();
             }
         }
-        if (currentPlayerLife <= 0)
-        {
-            Application.Quit();
-        }
+    
         PerformRunAndJump();
     }
 
