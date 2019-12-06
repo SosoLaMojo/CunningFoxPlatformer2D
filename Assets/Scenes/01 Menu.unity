@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.53, y: -187}
+  m_AnchoredPosition: {x: 10.53, y: -128}
   m_SizeDelta: {x: 178.94, y: 62.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &10430563
@@ -359,7 +359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 604.4, y: -618}
+  m_AnchoredPosition: {x: 604.4, y: -544}
   m_SizeDelta: {x: 511.3, y: 69.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &146410135
@@ -1210,21 +1210,26 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Song Effect Owl
 
-    freesound.org par Tats14
+    freesound.org by Tats14
 
     (Song Edit)
 
 
     Song Effect Pick Up Egg
 
-    freesound.org par sbaneat
+    freesound.org by sbaneat
 
     (Song Edit)
 
 
     Theme Song
 
-    freesound.org par Mrthenoronha
+    freesound.org by Mrthenoronha
+
+
+    Song Effect Player Jump
+
+    freesound.org by cabled_mess
 
 
 
@@ -1273,7 +1278,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 210
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1297,12 +1302,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.000055008222, w: 0.49494117}
   m_textInfo:
     textComponent: {fileID: 644357772}
-    characterCount: 161
+    characterCount: 212
     spriteCount: 0
-    spaceCount: 27
-    wordCount: 26
+    spaceCount: 35
+    wordCount: 35
     linkCount: 0
-    lineCount: 12
+    lineCount: 15
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1362,7 +1367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -833.6}
+  m_AnchoredPosition: {x: 298, y: -798}
   m_SizeDelta: {x: 964.8, y: 124.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &684653576
@@ -2066,7 +2071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -612, y: -187}
+  m_AnchoredPosition: {x: -612, y: -128}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1707870591
@@ -2457,7 +2462,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 582, y: -187}
+  m_AnchoredPosition: {x: 582, y: -128}
   m_SizeDelta: {x: 305, y: 57.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841865001
