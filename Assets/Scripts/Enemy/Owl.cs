@@ -5,6 +5,8 @@ using UnityEngine;
 public class Owl : MonoBehaviour
 {
     Rigidbody2D body;
+    SpriteRenderer rendererOwl;
+    [SerializeField] AudioSource audioSource;
 
     [SerializeField] float speed = 20.0f;
 
@@ -20,6 +22,7 @@ public class Owl : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        rendererOwl = GetComponent<SpriteRenderer>();
         initialPosition = transform.position;
     }
     
@@ -65,11 +68,19 @@ public class Owl : MonoBehaviour
 
         if (body.velocity.x <= 0)
         {
-            GetComponent<SpriteRenderer>().flipX = false;
+            rendererOwl.flipX = false;
         }
         else
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            rendererOwl.flipX = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            audioSource.Play();
         }
     }
 }
