@@ -25,7 +25,7 @@ public class MenuManager : MonoBehaviour
             }
         }
 
-        if (playerController.GetPlayerLife() <= 0)
+        if (playerController.GetPlayerLife() <= 0.1f)
         {
             panelGameOver.gameObject.SetActive(true);
             Time.timeScale = 0;
@@ -57,7 +57,7 @@ public class MenuManager : MonoBehaviour
 
     public void ActivatePanelMenuStartGame()
     {
-        panelCredits.gameObject.SetActive(true);
+        panelMenuStartGame.gameObject.SetActive(true);
         Time.timeScale = 0;
     }
     public void DesactivatePanelMenuStartGame()
