@@ -1,15 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] GameObject panelMenuPause;
     [SerializeField] GameObject panelGameOver;
+    [SerializeField] GameObject panelWin;
     [SerializeField] GameObject panelCredits;
     [SerializeField] GameObject panelMenuStartGame;
     [SerializeField] PlayerController playerController;
+
+    [SerializeField] int maxEggs = 25;
 
     void Update()
     {
@@ -25,9 +26,17 @@ public class MenuManager : MonoBehaviour
             }
         }
 
-        if (playerController.GetPlayerLife() <= 0.1f)
+        int playerDeath = playerController.GetPlayerLife();
+
+        if (playerDeath <= 0.1f)
         {
             panelGameOver.gameObject.SetActive(true);
+            Time.timeScale = 0;
+        }
+
+        if (playerController.GetEggScore() > maxEggs)
+        {
+            panelWin.gameObject.SetActive(true);
             Time.timeScale = 0;
         }
     }

@@ -7,6 +7,8 @@ public class Egg : MonoBehaviour
     [SerializeField] AudioClip eggSound;
     AudioSource audioSource;
 
+    private bool isActive = true;
+
     private void Start()
     {
        audioSource = GetComponent<AudioSource>();
@@ -14,7 +16,7 @@ public class Egg : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player") && isActive)
         {
             other.GetComponent<PlayerController>().AddEgg(value);
 
@@ -28,6 +30,7 @@ public class Egg : MonoBehaviour
             {
                 audioSource.Play();
             }
+            isActive = false;
             GetComponent<SpriteRenderer>().enabled = false;
             Destroy(gameObject, audioSource.clip.length);
         }

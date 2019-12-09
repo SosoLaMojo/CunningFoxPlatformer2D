@@ -9,33 +9,25 @@ public class PlayerController : MonoBehaviour
 
     AudioSource audioSource;
 
-    [SerializeField]
-    private int egg = 0, playerLifeMax = 10;
+    [SerializeField] private int egg = 0;
+    [SerializeField] private int currentPlayerLife, playerLifeMax = 10;
+    [SerializeField] private int owlDamage = 1, fallingDamage = 1;
 
-    [SerializeField]
-    private int currentPlayerLife;
+    [SerializeField] private float maxSpeed = 70.0f, maxSpeedJump = 200.0f;
 
-    [SerializeField]
-    private int owlDamage = 1, fallingDamage = 1;
-
-    private Vector2 velocity;
-    private Rigidbody2D rigidBody;
-
-    [SerializeField]
-    private float maxSpeed = 70.0f, maxSpeedJump = 200.0f;
-
-    [SerializeField]
-    private GameObject groundCheck;
-
-    [SerializeField]
-    private LayerMask layer;
-
-    private Vector3 startPosition;
-
-    private float respawnPosition = -13.5f;
+    [SerializeField] private GameObject groundCheck;
+    [SerializeField] private LayerMask layer;
 
     [SerializeField] TextMeshProUGUI textEggScore;
     [SerializeField] TextMeshProUGUI textHeartPlayer;
+
+    private float respawnPosition = -13.5f;
+
+    private Color colorPlayer;
+
+    private Vector2 velocity;
+    private Vector3 startPosition;
+    private Rigidbody2D rigidBody;
 
     private void Start()
     {
@@ -43,10 +35,11 @@ public class PlayerController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         playerRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
         startPosition = transform.position;
         currentPlayerLife = playerLifeMax;
+        colorPlayer = GetComponent<SpriteRenderer>().color;
         textHeartPlayer.text = currentPlayerLife.ToString();
-        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -112,12 +105,14 @@ public class PlayerController : MonoBehaviour
         }
         rigidBody.velocity = new Vector2(velocity.x * maxSpeed * Time.fixedDeltaTime, rigidBody.velocity.y);
         Animator.SetBool("IsJumping", !isGrounded);
+
     }
 
     public void Respawn()
     {
         transform.position = startPosition;
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(groundCheck.transform.position, new Vector3(0.32f, 0.06f, 0));
@@ -131,12 +126,26 @@ public class PlayerController : MonoBehaviour
             {
                 currentPlayerLife -= owlDamage;
                 textHeartPlayer.text = currentPlayerLife.ToString();
+                playerRenderer.color = Color.red;
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            playerRenderer.color = colorPlayer;
         }
     }
 
     public int GetPlayerLife()
     {
         return currentPlayerLife;
+    }
+
+    public int GetEggScore()
+    {
+        return egg;
     }
 }
