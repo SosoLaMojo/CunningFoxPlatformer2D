@@ -1,13 +1,11 @@
 ﻿using UnityEngine;
 using TMPro;
 
-
 public class PlayerController : MonoBehaviour
 {
     private Animator Animator;
     private SpriteRenderer playerRenderer;
-
-    AudioSource audioSource;
+    private AudioSource audioSource; //TODO add private
 
     [SerializeField] private int egg = 0;
     [SerializeField] private int currentPlayerLife, playerLifeMax = 10;
@@ -17,9 +15,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private GameObject groundCheck;
     [SerializeField] private LayerMask layer;
-
-    [SerializeField] TextMeshProUGUI textEggScore;
-    [SerializeField] TextMeshProUGUI textHeartPlayer;
+    [SerializeField] private TextMeshProUGUI textEggScore; //TODO add private
+    [SerializeField] private TextMeshProUGUI textHeartPlayer; //TODO add private
 
     private float respawnPosition = -13.5f;
 
@@ -35,10 +32,10 @@ public class PlayerController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         playerRenderer = GetComponent<SpriteRenderer>();
+        colorPlayer = GetComponent<SpriteRenderer>().color;
         audioSource = GetComponent<AudioSource>();
         startPosition = transform.position;
         currentPlayerLife = playerLifeMax;
-        colorPlayer = GetComponent<SpriteRenderer>().color;
         textHeartPlayer.text = currentPlayerLife.ToString();
     }
 
@@ -68,8 +65,6 @@ public class PlayerController : MonoBehaviour
 
         velocity = new Vector2(x, y);
 
-        RunAndJump(velocity);
-
         if (transform.position.y <= respawnPosition)
         {
             Respawn();
@@ -79,7 +74,6 @@ public class PlayerController : MonoBehaviour
                 textHeartPlayer.text = currentPlayerLife.ToString();
             }
         }
-    
         PerformRunAndJump();
     }
 
@@ -89,14 +83,9 @@ public class PlayerController : MonoBehaviour
         textEggScore.text = egg.ToString();
     }
 
-    public void RunAndJump(Vector2 _velocity)
-    {
-        velocity = _velocity;
-    }
-
     private void PerformRunAndJump()
     {
-        bool grounded = Physics2D.OverlapBox(groundCheck.transform.position, new Vector3(0.32f, 0.06f, 0), layer);
+        bool grounded = Physics2D.OverlapBox(groundCheck.transform.position, new Vector3(0.32f, 0.06f, 0), layer); //TODO magic number
         bool isGrounded = grounded && Mathf.Abs(rigidBody.velocity.y) <= 0.01f;
 
         if (isGrounded)
@@ -105,10 +94,9 @@ public class PlayerController : MonoBehaviour
         }
         rigidBody.velocity = new Vector2(velocity.x * maxSpeed * Time.fixedDeltaTime, rigidBody.velocity.y);
         Animator.SetBool("IsJumping", !isGrounded);
-
     }
 
-    public void Respawn()
+    private void Respawn() //TODO set private
     {
         transform.position = startPosition;
     }
@@ -122,7 +110,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            if (currentPlayerLife >= 0.1f)
+            if (currentPlayerLife >= 1)
             {
                 currentPlayerLife -= owlDamage;
                 textHeartPlayer.text = currentPlayerLife.ToString();

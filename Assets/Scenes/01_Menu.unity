@@ -591,7 +591,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 604.4, y: -544}
+  m_AnchoredPosition: {x: 586, y: -650}
   m_SizeDelta: {x: 511.3, y: 69.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &146410135
@@ -902,7 +902,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.6299438, y: -215}
+  m_AnchoredPosition: {x: 2.6299438, y: -212}
   m_SizeDelta: {x: 569.7, y: 263.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265955770
@@ -930,7 +930,12 @@ MonoBehaviour:
 
     Tileset Eggs
 
-    itch.io by toarna23 '
+    itch.io by toarna23
+
+
+    Sprite Title Game
+
+    Solange Schmid'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -975,7 +980,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 58
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -999,12 +1004,12 @@ MonoBehaviour:
   m_margin: {x: 2.6034822, y: 0, z: -2.603174, w: -0.59349084}
   m_textInfo:
     textComponent: {fileID: 265955770}
-    characterCount: 57
+    characterCount: 90
     spriteCount: 0
-    spaceCount: 9
-    wordCount: 9
+    spaceCount: 14
+    wordCount: 14
     linkCount: 0
-    lineCount: 5
+    lineCount: 8
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1110,7 +1115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 395}
+  m_AnchoredPosition: {x: 0, y: 443}
   m_SizeDelta: {x: 460.4, y: 96.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &350132481
@@ -1248,7 +1253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &472335552
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1742,7 +1747,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: P
+  m_text: Esc
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1770,8 +1775,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1811,7 +1816,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 13.60429}
   m_textInfo:
     textComponent: {fileID: 629041813}
-    characterCount: 1
+    characterCount: 3
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -1876,7 +1881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -371.00003}
+  m_AnchoredPosition: {x: -4, y: -358}
   m_SizeDelta: {x: 604, y: 538.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &644357772
@@ -1919,6 +1924,11 @@ MonoBehaviour:
     Song Effect Player Jump
 
     freesound.org by cabled_mess
+
+
+    Song Effect player lose life
+
+    freesound.org by Motion_S
 
 
 
@@ -1967,7 +1977,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 210
+  m_firstOverflowCharacterIndex: 266
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1988,15 +1998,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0.000055008222, w: 0.49494117}
+  m_margin: {x: 0, y: 0, z: 0.000055008222, w: -156.67271}
   m_textInfo:
     textComponent: {fileID: 644357772}
-    characterCount: 212
+    characterCount: 268
     spriteCount: 0
-    spaceCount: 35
-    wordCount: 35
+    spaceCount: 44
+    wordCount: 45
     linkCount: 0
-    lineCount: 15
+    lineCount: 18
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2056,7 +2066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 298, y: -798}
+  m_AnchoredPosition: {x: 298, y: -874}
   m_SizeDelta: {x: 964.8, y: 124.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &684653576
@@ -3366,7 +3376,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: -447}
+  m_AnchoredPosition: {x: -6, y: -433}
   m_SizeDelta: {x: 575.4, y: 694.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1736842489
@@ -3401,7 +3411,12 @@ MonoBehaviour:
 
     itch.io by Elthen''s Pixel Art Shop
 
-    (Add Colors)'
+    (Add Colors)
+
+
+    Sprite Input Infos
+
+    opengameart.org by Rallix'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3470,12 +3485,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 1.4179751, z: -3.0276275, w: 0.4930674}
   m_textInfo:
     textComponent: {fileID: 1736842489}
-    characterCount: 169
+    characterCount: 215
     spriteCount: 0
-    spaceCount: 26
-    wordCount: 27
+    spaceCount: 33
+    wordCount: 34
     linkCount: 0
-    lineCount: 10
+    lineCount: 13
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -3812,7 +3827,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level 1
+          m_StringArgument: 02_Level1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1939304222

@@ -2,16 +2,18 @@
 
 public class Egg : MonoBehaviour
 {
-    [SerializeField] int value = 1;
-    [SerializeField] GameObject owl;
-    [SerializeField] AudioClip eggSound;
-    AudioSource audioSource;
+    [SerializeField] private int value = 1;
+    [SerializeField] private GameObject owl;
+    [SerializeField] private AudioClip eggSound;
+    private AudioSource audioSource;
+    private Renderer renderer;
 
     private bool isActive = true;
 
     private void Start()
     {
        audioSource = GetComponent<AudioSource>();
+       renderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -31,7 +33,7 @@ public class Egg : MonoBehaviour
                 audioSource.Play();
             }
             isActive = false;
-            GetComponent<SpriteRenderer>().enabled = false;
+            renderer.enabled = false; //TODO put inside the Start
             Destroy(gameObject, audioSource.clip.length);
         }
     }

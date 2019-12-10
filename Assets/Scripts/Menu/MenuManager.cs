@@ -3,18 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] GameObject panelMenuPause;
-    [SerializeField] GameObject panelGameOver;
-    [SerializeField] GameObject panelWin;
-    [SerializeField] GameObject panelCredits;
-    [SerializeField] GameObject panelMenuStartGame;
-    [SerializeField] PlayerController playerController;
+    [SerializeField] private GameObject panelMenuPause;
+    [SerializeField] private GameObject panelGameOver;
+    [SerializeField] private GameObject panelWin;
+    [SerializeField] private GameObject panelCredits;
+    [SerializeField] private GameObject panelMenuStartGame;
+    [SerializeField] private PlayerController playerController;
 
-    [SerializeField] int maxEggs = 25;
+    [SerializeField] private int maxEggs = 25;
 
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (panelMenuPause.activeSelf)
             {
@@ -28,7 +28,7 @@ public class MenuManager : MonoBehaviour
 
         int playerDeath = playerController.GetPlayerLife();
 
-        if (playerDeath <= 0.1f)
+        if (playerDeath <= 0.1f) //TODO float comparaison with an int
         {
             panelGameOver.gameObject.SetActive(true);
             Time.timeScale = 0;

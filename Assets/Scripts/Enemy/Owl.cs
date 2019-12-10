@@ -2,11 +2,11 @@
 
 public class Owl : MonoBehaviour
 {
-    Rigidbody2D body;
-    SpriteRenderer rendererOwl;
-    [SerializeField] AudioSource audioSource;
+    private Rigidbody2D body;
+    private SpriteRenderer rendererOwl;
 
-    [SerializeField] float speed = 20.0f;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private float speed = 20.0f;
 
     Vector3 eggPosition;
     Vector3 initialPosition;
@@ -17,7 +17,7 @@ public class Owl : MonoBehaviour
         set { eggPosition = value; }
     }
 
-    void Start()
+    private void Start()
     {
         body = GetComponent<Rigidbody2D>();
         rendererOwl = GetComponent<SpriteRenderer>();
@@ -34,13 +34,13 @@ public class Owl : MonoBehaviour
 
     State state = State.FALLING;
 
-    void Update()
+    private void Update()
     {
         switch (state)
         {
             case State.FALLING:
                 body.velocity = (eggPosition - transform.position).normalized * speed;
-                if (Vector3.Distance(transform.position, eggPosition) < 0.1f)
+                if (Vector3.Distance(transform.position, eggPosition) < 0.1f) //TODO magic number
                 {
                     state = State.WAITING;
                 }
@@ -53,7 +53,7 @@ public class Owl : MonoBehaviour
 
             case State.GOINGUP:
                 body.velocity = (initialPosition - transform.position).normalized * speed;
-                if(Vector3.Distance(transform.position, initialPosition) < 0.2f)
+                if(Vector3.Distance(transform.position, initialPosition) < 0.2f) //TODO magic number
                 {
                 state = State.DESTROY;
                 }
@@ -62,15 +62,6 @@ public class Owl : MonoBehaviour
             case State.DESTROY:
                 Destroy(gameObject);
                 break;
-        }
-
-        if (body.velocity.x <= 0)
-        {
-            rendererOwl.flipX = false;
-        }
-        else
-        {
-            rendererOwl.flipX = true;
         }
     }
 

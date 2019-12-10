@@ -3,8 +3,8 @@ using UnityEngine;
 public class Camera2DFollow : MonoBehaviour
 {
     [SerializeField] Transform target;
-    [SerializeField] float damping = 1;
-    [SerializeField] float lookAheadFactor = 3;
+    [SerializeField] float damping = 1f;
+    [SerializeField] float lookAheadFactor = 3f;
     [SerializeField] float lookAheadReturnSpeed = 0.5f;
     [SerializeField] float lookAheadMoveThreshold = 0.1f;
 
