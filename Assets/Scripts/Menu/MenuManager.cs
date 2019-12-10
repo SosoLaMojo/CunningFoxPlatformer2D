@@ -26,9 +26,9 @@ public class MenuManager : MonoBehaviour
             }
         }
 
-        int playerDeath = playerController.GetPlayerLife();
+        float playerDeath = playerController.GetPlayerLife();
 
-        if (playerDeath <= 0.1f) //TODO float comparaison with an int
+        if (playerDeath <= 0.1f)
         {
             panelGameOver.gameObject.SetActive(true);
             Time.timeScale = 0;

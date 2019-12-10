@@ -33,7 +33,7 @@ public class Egg : MonoBehaviour
                 audioSource.Play();
             }
             isActive = false;
-            renderer.enabled = false; //TODO put inside the Start
+            renderer.enabled = false;
             Destroy(gameObject, audioSource.clip.length);
         }
     }

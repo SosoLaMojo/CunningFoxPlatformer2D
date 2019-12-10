@@ -53,7 +53,7 @@ public class Owl : MonoBehaviour
 
             case State.GOINGUP:
                 body.velocity = (initialPosition - transform.position).normalized * speed;
-                if(Vector3.Distance(transform.position, initialPosition) < 0.2f) //TODO magic number
+                if(Vector3.Distance(transform.position, initialPosition) < 0.1f) //TODO magic number
                 {
                 state = State.DESTROY;
                 }

@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     private Animator Animator;
     private SpriteRenderer playerRenderer;
-    private AudioSource audioSource; //TODO add private
+    private AudioSource audioSource;
 
     [SerializeField] private int egg = 0;
     [SerializeField] private int currentPlayerLife, playerLifeMax = 10;
@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private GameObject groundCheck;
     [SerializeField] private LayerMask layer;
-    [SerializeField] private TextMeshProUGUI textEggScore; //TODO add private
-    [SerializeField] private TextMeshProUGUI textHeartPlayer; //TODO add private
+    [SerializeField] private TextMeshProUGUI textEggScore;
+    [SerializeField] private TextMeshProUGUI textHeartPlayer;
 
     private float respawnPosition = -13.5f;
 
@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
         Animator.SetBool("IsJumping", !isGrounded);
     }
 
-    private void Respawn() //TODO set private
+    private void Respawn()
     {
         transform.position = startPosition;
     }

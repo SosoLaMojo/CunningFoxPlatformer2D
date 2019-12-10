@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Camera2DFollow : MonoBehaviour
 {
-    [SerializeField] Transform target;
-    [SerializeField] float damping = 1f;
-    [SerializeField] float lookAheadFactor = 3f;
-    [SerializeField] float lookAheadReturnSpeed = 0.5f;
-    [SerializeField] float lookAheadMoveThreshold = 0.1f;
+    [SerializeField] private Transform target;
+    [SerializeField] private float damping = 1f;
+    [SerializeField] private float lookAheadFactor = 3f;
+    [SerializeField] private float lookAheadReturnSpeed = 0.5f;
+    [SerializeField] private float lookAheadMoveThreshold = 0.1f;
 
     private float offsetZ;
     private Vector3 lastTargetPosition;
